@@ -1,51 +1,59 @@
-# surfer
+# jobs.kousun.com
 
-The simple **WIP Blog** built on *pure Rust stack*, with upcoming upgrades.
+[中文](./README-ZH.md)
 
-Backend for graphql services using tide, async-graphql, jsonwebtoken, mongodb and so on. 
+The **frontend** for https://jobs.kousun.com, a **Web Application Server built on Rust Web Stacks**: tide, async-std, fluent, graphql_client, surf, rhai, handlebars, lettre ...
 
-There are two options for web frontend:
-- Frontend-yew for web application using yew, graphql_client, cookie and so on.
-- Frontend-handlebars for web application using tide, yew, rhai, surf, graphql_client, handlebars-rust, cookie and so on.
+> [KouSun | 蔻隼](https://kousun.com) aims to build a **multi-language** CMS(Content Management System) based on **Rust Web stacks**, with long-term upgrade and maintenance.
 
-See also: 
-- https://github.com/zzy/tide-async-graphql-mongodb - Clean boilerplate for graphql services, wasm/yew & handlebars frontend. 
-- https://github.com/piexue/piexue.com - Multi-language CMS based on the Rust web stacks.
+## Demo site
 
-## Features
+- [jobs.kousun.com - Projects Matchmaking](https://jobs.kousun.com)
+- [kids.kousun.com - Kids Education](https://kids.kousun.com)
+- [niqin.com - Books Platform](https://niqin.com)
 
-Demo site:
-- [niqin.com - NiQin Books Platform | 泥芹书馆](https://niqin.com)
-- [piexue.com - Project Matchmaking | 项目对接](https://piexue.com)
+## Build & run
 
-## MongoDB data
+``` Bash
+git clone https://github.com/rusthub-org/jobs.kousun.com
+cd jobs.kousun.com
+```
 
-MongoDB data(include structure & documents) file is `/data/surfer-dev.sql`.
+Rename file `.env.example` to `.env`, or put the environment variables into a `.env` file:
 
-If you need mongodb cloud count, please send email to me.
+```
+DOMAIN=kousun.com
+ADDR=127.0.0.1
+PORT=7401
+LOG_LEVEL=Debug
 
-## Stacks
+GQL_PROT=http
+GQL_ADDR=127.0.0.1
+GQL_PORT=8400
+GQL_URI=gql
+GQL_VER=v1
+GIQL_VER=v1i
 
-- [Rust](https://github.com/rust-lang/rust) - [Rust By Example](https://rust-by-example.niqin.com) and [Cargo Book](https://cargo.niqin.com)
-- [Tide](https://crates.io/crates/tide) - [Tide Book](https://tide-book.niqin.com)
-- [rhai](https://crates.io/crates/rhai) - [Embedded Scripting for Rust](https://rhai-script.niqin.com)
-- [async-graphql](https://crates.io/crates/async-graphql) - [async-graphql docs](https://async-graphql.niqin.com)
-- [mongodb & mongo-rust-driver](https://crates.io/crates/mongodb)
-- [Surf](https://crates.io/crates/surf)
-- [graphql_client](https://crates.io/crates/graphql_client)
-- [yew](https://yew.niqin.com)
-- [handlebars-rust](https://crates.io/crates/handlebars)
-- [jsonwebtoken](https://crates.io/crates/jsonwebtoken)
-- [cookie-rs](https://crates.io/crates/cookie)
+EMAIL_SMTP=<smtp.server>
+EMAIL_FROM=<email_account>
+EMAIL_USERNAME=<username>
+EMAIL_PASSWORD=<password>
+```
 
-## How to Build & Run?
+Then, build & run:
 
-Please read:
+``` Bash
+cargo build
+cargo run # or cargo watch -x run
+```
 
-- [**Backend: graphql servies server**](./backend/README.md)
-- [**Frontend-yew: web application server**](./frontend-yew/README.md)
-- [**Frontend-handlebars: web application server**](./frontend-handlebars/README.md)
+Then connect to http://127.0.0.1:7401 with browser.
 
-## Contributing
+## Backend
 
-You are welcome in contributing to the surfer project. 
+- [kousun-api](https://github.com/rusthub-org/api.kousun.com)
+
+See also:
+
+- https://github.com/zzy/tide-async-graphql-mongodb - Clean boilerplate for graphql services, wasm/yew & handlebars frontend
+- https://github.com/zzy/surfer - [WIP] Blog based on graphql services & wasm/yew
