@@ -47,7 +47,7 @@ cargo build
 cargo run # or cargo watch -x run
 ```
 
-Then connect to http://127.0.0.1:7401 with browser.
+WebUI: connect to http://127.0.0.1:7401 with browser.
 
 ## Backend
 
