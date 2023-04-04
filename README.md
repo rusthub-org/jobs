@@ -22,7 +22,7 @@ cd jobs.kousun.com
 Rename file `.env.example` to `.env`, or put the environment variables into a `.env` file:
 
 ```
-DOMAIN=kousun.com
+DOMAIN=jobs.kousun.com
 ADDR=127.0.0.1
 PORT=7401
 LOG_LEVEL=Debug
