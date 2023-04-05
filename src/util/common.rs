@@ -19,7 +19,7 @@ pub async fn gql_uri() -> String {
 }
 
 pub async fn scripts_dir() -> String {
-    format!("./{}/", "scripts")
+    format!("./assets/{}/", "scripts")
 }
 
 pub async fn tpls_dir() -> String {
@@ -55,7 +55,7 @@ pub fn get_lang_msg(
     let lang_res = get_lang_res(root_tpl);
     for res_file in lang_res {
         let res_path = PathBuf::from(env!("CARGO_MANIFEST_DIR"))
-            .join("locales")
+            .join("./assets/locales")
             .join(lang_id)
             .join(res_file);
         let res_source = read_to_string(&res_path).expect(&format!(
