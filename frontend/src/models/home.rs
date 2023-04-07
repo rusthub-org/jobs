@@ -31,21 +31,21 @@ type ObjectId = String;
 
 #[derive(GraphQLQuery)]
 #[graphql(
-    schema_path = "./assets/graphql/schema.graphql",
-    query_path = "./assets/graphql/home.graphql"
+    schema_path = "../assets/graphql/schema.graphql",
+    query_path = "../assets/graphql/home.graphql"
 )]
 pub struct HomeData;
 
 #[derive(GraphQLQuery)]
 #[graphql(
-    schema_path = "./assets/graphql/schema.graphql",
-    query_path = "./assets/graphql/home.graphql"
+    schema_path = "../assets/graphql/schema.graphql",
+    query_path = "../assets/graphql/home.graphql"
 )]
 pub struct RegisterData;
 
 #[derive(GraphQLQuery)]
 #[graphql(
-    schema_path = "./assets/graphql/schema.graphql",
-    query_path = "./assets/graphql/home.graphql"
+    schema_path = "../assets/graphql/schema.graphql",
+    query_path = "../assets/graphql/home.graphql"
 )]
 pub struct SignInData;

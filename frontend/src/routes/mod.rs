@@ -13,7 +13,7 @@ use crate::util::common::tpls_dir;
 pub async fn push_res(app: &mut Server<State>) {
     app.at("/").get(super::routes::home::init);
 
-    app.at("/static/*").serve_dir("./assets/static/").unwrap();
+    app.at("/static/*").serve_dir("../assets/static/").unwrap();
 
     app.at("/ads.txt")
         .serve_file(format!("{}{}", tpls_dir().await, "ads.txt"))
