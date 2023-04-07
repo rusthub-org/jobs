@@ -1,7 +1,5 @@
 * linguist-language=Rust
 
-*.md linguist-detectable=true
-
 * text=auto eol=lf
 
 *.{cmd,[cC][mM][dD]} text eol=crlf
