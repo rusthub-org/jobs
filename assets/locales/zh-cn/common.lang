@@ -2,7 +2,7 @@ site-name = 工作@蔻隼
 site-slogan = 直接、自由、智能
 site-intro = 智能对接服务平台，旨在连接需求方与开发者。<br>
     让开发者和需求方直面沟通、自由交流，无需任何中介。<br>
-    永远免费，基于 Scratch 和 Rust web 技术栈构建。
+    永远免费，基于 Rust web 技术栈构建。
 
 nav-projects = 项目需求
 nav-projects-tip = 项目需求描述、招募要求，以及参考文档和案例等

@@ -2,7 +2,7 @@ site-name = Jobs@KouSun
 site-slogan = Direct, Free, Intelligent
 site-intro = Intelligent Matchmaking Service Platform, which aims to match the projects and developers.<br>
     Let employers and developers communicate directly and freely, no any intermediary.<br>
-    Always free, based on Scratch & Rust web stacks.
+    Always free, based on Rust web stacks.
 
 nav-projects = Projects
 nav-projects-tip = Project and its requirements, recruitment condition, documents and cases ...
