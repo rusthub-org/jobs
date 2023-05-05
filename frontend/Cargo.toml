@@ -26,5 +26,5 @@ lettre = "0.10"
 fluent-bundle = "0.15"
 
 [dev-dependencies]
-rhai = "1.13"
+rhai = "1.14"
 kv-log-macro = "1.0"

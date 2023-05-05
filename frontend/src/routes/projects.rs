@@ -1,9 +1,9 @@
 use std::{
     collections::BTreeMap,
     time::{SystemTime, UNIX_EPOCH},
-    path::Path,
 };
-use async_std::{fs::OpenOptions, io};
+use async_std::path::Path;
+
 use tide::{Request, Response, Redirect, http::Method};
 use graphql_client::{GraphQLQuery, Response as GqlResponse};
 use serde_json::{Value, json};
@@ -13,6 +13,7 @@ use crate::State;
 use crate::util::{
     common::{gql_uri, sign_status},
     tpl::{Hbs, insert_user_by_username, insert_wish_random},
+    upload::file_copy,
 };
 
 use crate::models::{
@@ -830,26 +831,26 @@ pub async fn project_random(req: Request<State>) -> tide::Result {
     Ok(resp.into())
 }
 
-pub async fn file_new(mut req: Request<State>) -> tide::Result {
+pub async fn file_new(req: Request<State>) -> tide::Result {
     let language = String::from(req.param("language")?);
 
     let file_name_percent = req.param("file_name")?;
     let file_name_percent_de = percent_decode(file_name_percent.as_bytes());
     let file_name = String::from(file_name_percent_de.decode_utf8()?);
 
-    let file_ext_index = file_name.rfind(".");
     let now_micros = SystemTime::now().duration_since(UNIX_EPOCH)?.as_micros();
+
+    let file_ext_index = file_name.rfind(".").unwrap();
+    let file_ext = &file_name[file_ext_index..];
 
     let mut file_location = String::new();
     file_location.push_str(now_micros.to_string().as_str());
-    if let Some(ext_index) = file_ext_index {
-        file_location.push_str(&file_name[ext_index..]);
-    }
+    file_location.push_str(file_ext);
 
-    let file_path = Path::new("../assets/static/files").join(&file_location);
-    let mut file =
-        OpenOptions::new().create(true).write(true).open(&file_path).await?;
-    let file_copy = io::copy(&mut req, &mut file).await;
+    let file_path_dir = String::from("../files/projects");
+    let file_path = Path::new(&file_path_dir).join(&file_location);
+
+    let file_copy = file_copy(req, file_path).await;
 
     let res;
     if file_copy.is_ok() {
