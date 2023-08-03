@@ -1,4 +1,4 @@
-site-name = Jobs@KouSun
+site-name = JunHen
 site-slogan = Direct, Free, Intelligent
 site-intro = Intelligent Matchmaking Service Platform, which aims to match the projects and developers.<br>
     Let employers and developers communicate directly and freely, no any intermediary.<br>
@@ -31,7 +31,7 @@ projects-published = Latest Published
 
 register = Register
 sign-in = Sign in
-sign-in-intro = Sign in KouSun
+sign-in-intro = Sign in JunHen
 sign-out = Sign out
 
 user-profile = Your profile
@@ -60,6 +60,6 @@ user-risk-tip = This website only provides data aggregation without any legal re
     Please identify the risks by yourself and beware of being deceived.
 
 based-on = Based on 
-    <a href="https://github.com/zzy/kousun" target="_blank">zzy/kousun</a> 
+    <a href="https://rusthub.org" target="_blank">RustHub.org</a> 
     to Develop
 copyright = All Rights Reserved

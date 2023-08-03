@@ -7,17 +7,17 @@ sign-in-password-tip = Your Password
 
 sign-in-resend-email = Did not receive the activation link? Resend email
 
-sign-in-new-user = New to KouSun?
+sign-in-new-user = New to JunHen?
 sign-in-create-account = Create an account
 
 sign-in-incorrect = Username or email is incorrect
-sign-in-not-activation = Your KouSun account has not been activated, please check the activation email
+sign-in-not-activation = Your JunHen account has not been activated, please check the activation email
 sign-in-banned = This account has been banned, please contact the service assistant (ask@rusthub.org)
 sign-in-security-problem = Security problems with this account, please contact the service assistant (ask@rusthub.org)
 sign-in-not-registration = This account has not been registered
 
 user-register = User Register
-user-register-intro = Register KouSun
+user-register-intro = Register JunHen
 
 register-username = Username
 register-username-tip = Characters range: a-z、_-、0-9
@@ -43,21 +43,21 @@ register-have-account = Have an account?
 register-sign-in = Go Sign in
 
 register-result = <span class="fw-bold fc-blue-600">{ $nickname }</span>, Congratulate!
-    Your KouSun's account has been created successfully!
+    Your JunHen's account has been created successfully!
     <br><br>
     <span class="fw-bold">Username</span>: { $username }；
     <span class="fw-bold">Email</span>: { $email }。
     <br><br>
-    Please sign in your email, and check the activation email from KouSun, then to activate your account.
+    Please sign in your email, and check the activation email from JunHen, then to activate your account.
     <br><br>
-    If you didn't receive the activation email from KouSun, please
+    If you didn't receive the activation email from JunHen, please
     <a href="mailto:ask@rusthub.org">contact the service assistant (ask@rusthub.org)</a>
 register-failed-username-email-exists = Username or Email is exists
 
-email-subject = { $nickname } ({ $username }), account activation email from KouSun.com
+email-subject = { $nickname } ({ $username }), account activation email from JunHen
 email-body = Hi, { $nickname } ({ $username })! 
     <br><br>
-    This email sent from KouSun.com, it is your KouSun account activation email.
+    This email sent from JunHen, it is activation email for your account.
     <br><br>
     Please visit URL: https://{ $domain }/{ $language }/user/{ $user_id }/activate to activate your account.
     <br><br>
@@ -65,4 +65,4 @@ email-body = Hi, { $nickname } ({ $username })!
     <br><br>
     Please do not reply, thank you!
     <br><br>
-    KouSun.com
+    JunHen - https://junhen.com

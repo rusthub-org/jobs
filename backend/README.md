@@ -1,11 +1,11 @@
 # Backend: graphql servies server
 
-The **backend** for https://jobs.kousun.com, a **Graphql Services Server built on Rust Web Stacks**: tide, async-graphql, async-std, mongodb, jsonwebtoken, base64 & pulldown-cmark ...
+The **backend** for https://junhen.com, a **Graphql Services Server built on Rust Web Stacks**: tide, async-graphql, async-std, mongodb, jsonwebtoken, base64 & pulldown-cmark ...
 
 ## Build & run
 
 ``` Bash
-git clone https://github.com/rusthub-org/jobs.kousun.com
+git clone https://github.com/rusthub-org/jobs
 cd ./backend
 ```
 
@@ -16,7 +16,7 @@ ADDR=127.0.0.1
 PORT=8401
 LOG_LEVEL=Debug
 
-SITE_KID=jobs.kousun.com
+SITE_KID=junhen.com
 SITE_KEY=QiX7Riw8r..... # Replace with your SITE_KEY
 CLAIM_EXP=10000000000
 

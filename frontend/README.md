@@ -1,18 +1,18 @@
 # Frontend: web application server
 
-The **frontend** for https://jobs.kousun.com, a **Web Application Server built on Rust Web Stacks**: tide, async-std, fluent, graphql_client, surf, rhai, handlebars, lettre ...
+The **frontend** for https://junhen.com, a **Web Application Server built on Rust Web Stacks**: tide, async-std, fluent, graphql_client, surf, rhai, handlebars, lettre ...
 
 ## Build & run
 
 ``` Bash
-git clone https://github.com/rusthub-org/jobs.kousun.com
+git clone https://github.com/rusthub-org/jobs
 cd ./frontend
 ```
 
 Rename file `.env.example` to `.env`, or put the environment variables into a `.env` file:
 
 ```
-DOMAIN=jobs.kousun.com
+DOMAIN=junhen.com
 ADDR=127.0.0.1
 PORT=7401
 LOG_LEVEL=Debug
